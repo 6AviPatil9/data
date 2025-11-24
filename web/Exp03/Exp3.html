@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Registration Form</title>
+
+<script>
+function validateForm() {
+var name = document.forms["regForm"]["name"].value;
+var email = document.forms["regForm"]["email"].value;
+var password = document.forms["regForm"]["password"].value;
+var confirmPassword = document.forms["regForm"]["confirmPassword"].value;
+var phone = document.forms["regForm"]["phone"].value;
+var gender = document.forms["regForm"]["gender"].value;
+// Name validation
+if (name == "") {
+alert("Name must be filled out");
+return false;
+}
+// Email validation
+var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
+if (!emailPattern.test(email)) {
+alert("Enter a valid email address");
+return false;
+}
+// Password validation
+if (password.length < 6) {
+alert("Password must be at least 6 characters long");
+return false;
+}
+if (password != confirmPassword) {
+alert("Passwords do not match");
+return false;
+}
+// Phone validation
+var phonePattern = /^[0-9]{10}$/;
+if (!phonePattern.test(phone)) {
+alert("Phone number must be 10 digits");
+return false;
+}
+// Gender validation
+if (gender == "") {
+alert("Please select your gender");
+return false;
+}
+alert("Registration Successful!");
+return true;
+}
+</script>
+
+</head>
+<body>
+<h2>Student Registration Form</h2>
+<form name="regForm" onsubmit="return validateForm()">
+Name: <input type="text" name="name"><br><br>
+Email: <input type="text" name="email"><br><br>
+Password: <input type="password" name="password"><br><br>
+Confirm Password: <input type="password" name="confirmPassword"><br><br>
+Phone: <input type="text" name="phone"><br><br>
+Gender:
+<select name="gender">
+<option value="">Select</option>
+<option value="Male">Male</option>
+<option value="Female">Female</option>
+</select><br><br>
+<input type="submit" value="Register">
+</form>
+</body>
+</html>

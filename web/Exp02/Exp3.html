@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mobile Store Landing Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+        }
+
+        /* Header */
+        .header {
+            background: #222;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Product Section */
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+            justify-content: center;
+        }
+
+        .card {
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            width: 250px;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .card img {
+            width: 100%;
+        }
+
+        .card h3 {
+            color: #333;
+        }
+
+        .card p {
+            font-size: 18px;
+            color: green;
+        }
+
+        /* Responsive */
+        @media(max-width: 600px) {
+            .card {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>Smart Mobile Store</h1>
+        <p>Best Deals on Smartphones</p>
+    </div>
+
+    <div class="products">
+        <div class="card">
+            <img src="phone1.jpg">
+            <h3>Samsung Galaxy M32</h3>
+            <p>₹12,999</p>
+        </div>
+
+        <div class="card">
+            <img src="phone2.jpg">
+            <h3>iPhone 12</h3>
+            <p>₹49,999</p>
+        </div>
+
+        <div class="card">
+            <img src="phone3.jpg">
+            <h3>Redmi Note 11</h3>
+            <p>₹13,499</p>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Square, Cube & Factorial</title>
+</head>
+<body>
+
+    <h2>Enter a Number</h2>
+    <input type="number" id="num">
+    <button onclick="calculate()">Calculate</button>
+
+    <p id="result"></p>
+
+    <script>
+        function factorial(n) {
+            let fact = 1;
+            for (let i = 1; i <= n; i++) {
+                fact *= i;
+            }
+            return fact;
+        }
+
+        function calculate() {
+            let n = document.getElementById("num").value;
+
+            let square = n * n;
+            let cube = n * n * n;
+            let fact = factorial(n);
+
+            document.getElementById("result").innerHTML =
+                "Square: " + square + "<br>" +
+                "Cube: " + cube + "<br>" +
+                "Factorial: " + fact;
+        }
+    </script>
+
+</body>
+</html>
